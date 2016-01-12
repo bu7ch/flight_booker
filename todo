@@ -1,0 +1,18 @@
+# http://www.theodinproject.com/ruby-on-rails/building-advanced-forms
+
+Add model 'Airport' which takes name and shortcode (new york city + NYC)
+add model 'Flight' which takes the following: (id) start_airport, finish_airport, duration, startdate(date)
+Flight has_and_belongs_to_many: airports
+Add FlightsController with actions: index
+Set root route to flightscontroller#index
+Set up form using GET with 4 dropdowns: FROM TO PASSENGERS(1-4) DATE
+Search should happen on the same page, so leave dropdowns filled and print data to body
+
+Add model 'Booking' 
+Add model 'Passenger' which takes name and email
+passenger has_and_belongs_to_many: flights, bookings
+flights has_and_belongs_to_many: passengers, bookings
+bookings has_and_belongs_to_many: passengers, flights
+Add BookingsController with actions: new, create, show
+
+
